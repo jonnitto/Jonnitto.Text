@@ -1,0 +1,17 @@
+Jonnitto:
+  Text:
+    tagName: div
+    container: false
+    row: row
+    col: col-sm
+
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Jonnitto.Text:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        Jonnitto.Text: true

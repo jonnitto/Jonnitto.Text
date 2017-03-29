@@ -1,0 +1,33 @@
+'Jonnitto.Text:TextTwo':
+  abstract: true
+  superTypes:
+    'Jonnitto.Text:Layout': true
+  properties:
+    textTwo:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Jonnitto.Text:NodeTypes.LoremIpsum:placeholder'
+          alignment: {  }
+          autoparagraph: true
+          format:
+            strong: true
+            em: true
+            sub: true
+            sup: true
+            p: true
+            h2: true
+            h3: true
+            h4: true
+            removeFormat: true
+          table:
+            table: true
+          list:
+            ol: true
+            ul: true
+          link:
+            a: true
+          formatlesspaste:
+            button: true
+            formatlessPasteOption: true

@@ -1,0 +1,14 @@
+<{tagName}{attributes -> f:format.raw()}>
+	<f:if condition="{hasRow}">
+		<f:then>
+			<div{rowAttributes -> f:format.raw()}>
+				{text -> f:format.raw()}
+				{textTwo -> f:format.raw()}
+				{textThree -> f:format.raw()}
+			</div>
+		</f:then>
+		<f:else>
+			{text -> f:format.raw()}
+		</f:else>
+	</f:if>
+</{tagName}>

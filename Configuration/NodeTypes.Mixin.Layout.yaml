@@ -1,0 +1,28 @@
+'Jonnitto.Text:Layout':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          icon: icon-file-text
+          position: 50
+  properties:
+    layout:
+      type: string
+      defaultValue: one
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 100
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              one:
+                label: i18n
+                icon: icon-square-o
+              two:
+                label: i18n
+                icon: icon-columns

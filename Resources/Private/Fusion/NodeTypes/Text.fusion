@@ -1,0 +1,35 @@
+prototype(Jonnitto.Text:Text) < prototype(Content) {
+	layout = ${q(node).property('layout')}
+	hasRow = ${this.layout == 'two' || this.layout == 'three' ? true : false}
+	tagName = ${Configuration.setting('Jonnitto.Text.tagName')}
+
+	attributes.class = Fusion:RawArray {
+		@process.nodeType >
+		type = 'jonnitto-text'
+		container = ${Configuration.setting('Jonnitto.Text.container')}
+	}
+
+	rowAttributes = Fusion:Attributes {
+		class = ${Configuration.setting('Jonnitto.Text.row')}
+	}
+
+	colAttributes = Fusion:Attributes {
+		class = ${Configuration.setting('Jonnitto.Text.col')}
+	}
+
+	@context {
+		colAttributes = ${this.colAttributes}
+		hasRow = ${this.hasRow}
+		hasThree = ${this.layout == 'three' ? true : false}
+	}
+
+	text = Jonnitto.Text:Editable
+	textTwo = Jonnitto.Text:Editable {
+		property = 'textTwo'
+		@if.hasNeededLayout = ${hasRow}
+	}
+	textThree = Jonnitto.Text:Editable {
+		property = 'textThree'
+		@if.hasNeededLayout = ${hasThree}
+	}
+}

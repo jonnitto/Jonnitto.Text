@@ -1,0 +1,34 @@
+{
+    "name": "jonnitto/text",
+    "type": "neos-plugin",
+    "license": "MIT",
+    "description": "Text for Neos CMS",
+    "keywords": [
+        "flow",
+        "neos",
+        "text"
+    ],
+    "authors": [
+        {
+            "name": "Jon Uhlmann",
+            "email": "me@jonnitto.ch",
+            "homepage": "https://twitter.com/jonnitto",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "neos/neos": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jonnitto\\Text\\": "Classes"
+        }
+    },
+    "extra": {
+        "marketplace-account": "me@jonnitto.ch",
+        "installer-name": "Jonnitto.Text",
+        "neos": {
+            "package-key": "Jonnitto.Text"
+        }
+    }
+}

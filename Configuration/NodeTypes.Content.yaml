@@ -1,0 +1,10 @@
+'Jonnitto.Text:Text':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Jonnitto.Text:TextOne': true
+    #'Jonnitto.Text:TextTwo': true
+    #'Jonnitto.Text:TextThree': true
+  ui:
+    label: i18n
+    icon: icon-file-text
+    position: 200
