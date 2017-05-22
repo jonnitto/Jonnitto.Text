@@ -1,4 +1,6 @@
 prototype(Jonnitto.Text:Text) < prototype(Content) {
+	templatePath = 'resource://Jonnitto.Text/Private/Fusion/Text/Text.html'
+
 	layout = ${q(node).property('layout')}
 	hasRow = ${this.layout == 'two' || this.layout == 'three' ? true : false}
 	tagName = ${Configuration.setting('Jonnitto.Text.tagName')}
