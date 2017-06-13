@@ -1,3 +1,5 @@
+// Namespaces are defined in the Root.fusion file
+
 prototype(Jonnitto.Text:Editable) < prototype(Fusion:Tag) {
 	property = 'text'
 	@context.property = ${this.property}
