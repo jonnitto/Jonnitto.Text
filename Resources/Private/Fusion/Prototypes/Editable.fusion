@@ -3,7 +3,6 @@
 prototype(Jonnitto.Text:Editable) < prototype(Fusion:Tag) {
 	property = 'text'
 	@context.property = ${this.property}
-	attributes = ${hasRow && colAttributes ? colAttributes : false}
 	content = ${q(node).property(property)}
 	@process.contentElementEditable = ContentElementEditable
 }

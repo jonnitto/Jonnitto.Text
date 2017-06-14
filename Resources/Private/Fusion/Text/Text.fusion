@@ -5,12 +5,7 @@ prototype(Jonnitto.Text:Text) < prototype(Fusion:Tag) {
 	hasRow = ${this.layout == 'two' || this.layout == 'three' ? true : false}
 	tagName = ${Configuration.setting('Jonnitto.Text.tagName')}
 
-	colAttributes = Fusion:Attributes {
-		class = ${Configuration.setting('Jonnitto.Text.col')}
-	}
-
 	@context {
-		colAttributes = ${this.colAttributes}
 		hasRow = ${this.hasRow}
 		layout = ${this.layout}
 		hasThree = ${this.layout == 'three' ? true : false}
@@ -30,14 +25,24 @@ prototype(Jonnitto.Text:Text) < prototype(Fusion:Tag) {
 			}
 			content = ${value}
 		}
-		text = Jonnitto.Text:Editable
+		text = Jonnitto.Text:Editable {
+			attributes.class = Fusion:RawArray {
+				col = ${hasRow ? Configuration.setting('Jonnitto.Text.col') : false}
+			}
+		}
 		textTwo = Jonnitto.Text:Editable {
 			property = 'textTwo'
 			@if.hasNeededLayout = ${hasRow}
+			attributes.class = Fusion:RawArray {
+				col = ${hasRow ? Configuration.setting('Jonnitto.Text.col') : false}
+			}
 		}
 		textThree = Jonnitto.Text:Editable {
 			property = 'textThree'
 			@if.hasNeededLayout = ${hasThree}
+			attributes.class = Fusion:RawArray {
+				col = ${hasRow ? Configuration.setting('Jonnitto.Text.col') : false}
+			}
 		}
 	}
 
