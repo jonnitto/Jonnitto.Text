@@ -1,0 +1,12 @@
+prototype(Jonnitto.Text:Editable) < prototype(Neos.Fusion:Tag) {
+  property = 'text'
+  @context.property = ${this.property}
+
+  attributes.class = Neos.Fusion:RawArray
+  content = ${q(node).property(property)}
+
+  @process {
+    convertUris = ConvertUris
+    contentElementEditable = ContentElementEditable
+  }
+}

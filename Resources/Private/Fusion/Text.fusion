@@ -1,0 +1,53 @@
+prototype(Jonnitto.Text:Text) < prototype(Neos.Fusion:Tag) {
+  layout = ${q(node).property('layout')}
+  hasRow = ${this.layout == 'two' || this.layout == 'three' ? true : false}
+  tagName = ${Configuration.setting('Jonnitto.Text.tagName')}
+
+  classes = Neos.Fusion:RawArray {
+    row = ${Configuration.setting('Jonnitto.Text.row')}
+    col = ${Configuration.setting('Jonnitto.Text.col')}
+    container = ${Configuration.setting('Jonnitto.Text.container')}
+  }
+
+
+  @context {
+    layout = ${this.layout}
+    hasRow = ${this.hasRow}
+    classes = ${this.classes}
+  }
+
+  attributes.class = Neos.Fusion:RawArray {
+    type = 'jonnitto-text'
+    container = ${classes.container}
+  }
+
+  content = Neos.Fusion:Array {
+    @process.row = Neos.Fusion:Tag {
+      @if.hasRow = ${hasRow}
+      attributes = Neos.Fusion:Attributes {
+        class = ${classes.row}
+      }
+      content = ${value}
+    }
+    text = Jonnitto.Text:Editable {
+      attributes.class.col = ${hasRow ? classes.col : false}
+    }
+    textTwo = Jonnitto.Text:Editable {
+      property = 'textTwo'
+      @if.hasNeededLayout = ${hasRow}
+      attributes.class.col = ${classes.col}
+    }
+    textThree = Jonnitto.Text:Editable {
+      property = 'textThree'
+      @if.hasNeededLayout = ${layout == 'three' ? true : false}
+      attributes.class.col = ${classes.col}
+    }
+  }
+
+  @process.contentElementWrapping {
+    expression = Neos.Neos:ContentElementWrapping
+    @position = 'end 999999999'
+  }
+
+  @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\NodeWrappingHandler'
+}

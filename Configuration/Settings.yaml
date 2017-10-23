@@ -3,7 +3,7 @@ Jonnitto:
     tagName: div
     container: false
     row: row
-    col: 'col-12 col-sm'
+    col: col-sm
 
 Neos:
   Neos:

@@ -3,11 +3,7 @@
     "type": "neos-plugin",
     "license": "MIT",
     "description": "Text for Neos CMS",
-    "keywords": [
-        "flow",
-        "neos",
-        "text"
-    ],
+    "keywords": ["flow", "neos", "text"],
     "authors": [
         {
             "name": "Jon Uhlmann",
@@ -18,6 +14,9 @@
     ],
     "require": {
         "neos/neos": "~3.0 || dev-master"
+    },
+    "archive": {
+        "exclude": [".editorconfig", ".gitignore", ".github", ".gitattributes", "CODE_OF_CONDUCT.md"]
     },
     "autoload": {
         "psr-4": {
