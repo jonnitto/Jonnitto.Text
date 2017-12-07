@@ -1,9 +1,14 @@
-Jonnitto.Text Package for Neos CMS
-==================================
-
 [![Latest Stable Version](https://poser.pugx.org/jonnitto/text/v/stable)](https://packagist.org/packages/jonnitto/text)
 [![Total Downloads](https://poser.pugx.org/jonnitto/text/downloads)](https://packagist.org/packages/jonnitto/text)
-[![License](https://poser.pugx.org/jonnitto/text/license)](https://packagist.org/packages/jonnitto/text)
+[![License](https://poser.pugx.org/jonnitto/text/license)](LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/jonnitto/Jonnitto.Text.svg?style=social&label=Fork)](https://github.com/jonnitto/Jonnitto.Text/fork)
+[![GitHub stars](https://img.shields.io/github/stars/jonnitto/Jonnitto.Text.svg?style=social&label=Stars)](https://github.com/jonnitto/Jonnitto.Text/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/jonnitto/Jonnitto.Text.svg?style=social&label=Watch)](https://github.com/jonnitto/Jonnitto.Text/subscription)
+[![GitHub followers](https://img.shields.io/github/followers/jonnitto.svg?style=social&label=Follow)](https://github.com/jonnitto/followers)
+[![Follow Jon on Twitter](https://img.shields.io/twitter/follow/jonnitto.svg?style=social&label=Follow)](https://twitter.com/jonnitto)
+
+Jonnitto.Text Package for Neos CMS
+==================================
 
 With this package you add a text NodeType into [Neos CMS](https://www.neos.io).  
 Contributions are very welcome!
