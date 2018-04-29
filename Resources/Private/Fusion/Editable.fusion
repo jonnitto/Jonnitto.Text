@@ -6,7 +6,7 @@ prototype(Jonnitto.Text:Editable) < prototype(Neos.Fusion:Tag) {
   content = ${q(node).property(property)}
 
   @process {
-    convertUris = ConvertUris
-    contentElementEditable = ContentElementEditable
+    convertUris = Neos.Neos:ConvertUris
+    contentElementEditable = Neos.Neos:ContentElementEditable
   }
 }
